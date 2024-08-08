@@ -12,7 +12,7 @@ def start_page(page):
 
 @pytest.mark.parametrize("counter_number", [1, 2, 3])
 def test_screenshot_eco_counter(page, counter_number):
-    """Test  taking a screenshot of a given eco-counter"""
+    """Test taking a screenshot of a given eco-counter"""
     eco_impact = EcoImpact(page)
     eco_impact.screenshot_eco_counter(counter_number, f"outro/test1-{counter_number}.png")
 
@@ -27,4 +27,3 @@ def test_eco_impact_not_auth(page, counter_number, opacity_value):
     """Test checking eco impact block without user signing in"""
     eco_impact = EcoImpact(page)
     eco_impact.check_eco_impact_not_auth(counter_number, opacity_value)
-

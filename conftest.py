@@ -6,7 +6,7 @@ def browser():
     with sync_playwright() as p:
         # Different browsers can be chosen. Tests work for each of them
         # Start tests with only one browser active!
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(headless = False)
         #browser = p.firefox.launch()
         #browser = p.webkit.launch()
         yield browser
